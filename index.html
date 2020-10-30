@@ -66,10 +66,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 	margin: 20px auto 0;
 	width: 200px;
 	text-align: center;
-	color: rgb(179, 179, 179);
-	fill: rgb(179, 179, 179);
+	color: #333333;
+	fill: #333333;
 }html body.tc-body {
-  background: rgb(26, 26, 26);
+  background: #f4f4f4;
 }
 .line-wrapper {
   width: 100%;
@@ -82,7 +82,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 .line {
   width: 50px;
   height: 1px;
-  background: rgb(255, 255, 255);
+  background: #bbb;
   -webkit-animation: line 2s infinite; 
   -moz-animation: line 2s infinite; 
   -o-animation: line 2s infinite; 
@@ -101,7 +101,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 .linetwo {
   width: 50px;
   height: 1px;
-  background: rgb(255, 255, 255);
+  background: #bbb;
   -webkit-animation: linetwo 2s infinite; 
   -moz-animation: linetwo 2s infinite; 
   -o-animation: linetwo 2s infinite; 
@@ -121,7 +121,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 .linethree {
   width: 50px;
   height: 1px;
-  background: rgb(255, 255, 255);
+  background: #bbb;
   -webkit-animation: linethree 2s infinite; 
   -moz-animation: linethree 2s infinite; 
   -o-animation: linethree 2s infinite; 
@@ -345,6 +345,10 @@ Error message and password prompt
 
 <li>$:/SplashScreen</li>
 
+<li>$:/state/searchtab-1444756290</li>
+
+<li>$:/state/tab--1963855381</li>
+
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
@@ -354,6 +358,8 @@ Error message and password prompt
 <li>$:/StoryList</li>
 
 <li>$:/tags/SideBarSegment</li>
+
+<li>$:/temp/advancedsearch</li>
 
 <li>$:/temp/info-plugin</li>
 
@@ -10941,8 +10947,8 @@ toolbar-done-button:
 untagged-background: &lt;&lt;colour very-muted-foreground&gt;&gt;
 very-muted-foreground: rgba(255, 255, 255, 0.12)</pre>
 </div>
-<div bag="default" created="20190202142805411" creator="jd" modified="20200518103937609" modifier="jd" revision="0" title="$:/palette" type="text/vnd.tiddlywiki">
-<pre>$:/palettes/Twilight</pre>
+<div bag="default" created="20190202142805411" creator="jd" modified="20201030052828213" modifier="jd" revision="0" title="$:/palette" type="text/vnd.tiddlywiki">
+<pre>$:/palettes/Vanilla</pre>
 </div>
 <div bag="default" caption="{{$:/core/images/advanced-search-button}} search" created="20171122115403541" creator="JD" description="Toggle searchbar visibility" modified="20200430205248593" modifier="JD" revision="0" tags="$:/tags/jd/mobbutton" title="$:/plugins/jd/mob/button/search" type="text/vnd.tiddlywiki">
 <pre>&lt;$reveal type=&quot;nomatch&quot; state=&quot;$:/plugins/jd/mob/config/config##searchbar&quot; text=&quot;yes&quot;&gt;
@@ -11220,8 +11226,14 @@ html body.tc-body {
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20201030043824961" modified="20201030052157229" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20201030052633873" modified="20201030052633873" title="$:/state/searchtab-1444756290">
+<pre>$:/core/ui/AdvancedSearch/Standard</pre>
+</div>
+<div created="20201030052655071" modified="20201030052840970" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/StoryView</pre>
+</div>
+<div created="20201030043824961" modified="20201030052650275" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
 <div created="20201030043826400" modified="20201030052155543" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -11229,10 +11241,13 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201030052454269" list="$:/ControlPanel" modified="20201030052454269" title="$:/StoryList">
+<div created="20201030052617512" list="$:/ControlPanel [[Hello World]]" modified="20201030052648849" title="$:/StoryList">
 <pre></pre>
 </div>
 <div bag="default" created="20200502112123171" list="$:/core/ui/SideBarSegments/site-title $:/core/ui/SideBarSegments/site-subtitle $:/core/ui/SideBarSegments/page-controls $:/core/ui/SideBarSegments/search $:/core/ui/SideBarSegments/tabs" modified="20200502112123186" revision="0" title="$:/tags/SideBarSegment" type="text/vnd.tiddlywiki">
+<pre></pre>
+</div>
+<div created="20201030052628790" modified="20201030052644328" title="$:/temp/advancedsearch">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -12451,8 +12466,8 @@ div::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); }
 <div bag="default" created="20200429112839464" modified="20200429112848984" revision="0" title="$:/themes/tiddlywiki/vanilla/options/stickytitles" type="text/vnd.tiddlywiki">
 <pre>no</pre>
 </div>
-<div bag="default" created="20200429143346003" modified="20200518215459154" revision="0" title="$:/view" type="text/vnd.tiddlywiki">
-<pre>zoomin</pre>
+<div bag="default" created="20200429143346003" modified="20201030052859757" revision="0" title="$:/view" type="text/vnd.tiddlywiki">
+<pre>pop</pre>
 </div>
 <div created="20201030052211565" modified="20201030052222684" tags="" title="Hello World">
 <pre>&lt;&lt;&lt;
