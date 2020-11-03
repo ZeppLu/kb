@@ -649,6 +649,8 @@ Error message and password prompt
 
 <li>让 GDM 的登录页面出现在外置显示器上</li>
 
+<li>在 Gnome Terminal 中启用 Ctrl+Tab 快捷键</li>
+
 <li>Hello World</li>
 
 </ul>
@@ -15289,7 +15291,7 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201103032954248" list="[[让 GDM 的登录页面出现在外置显示器上]]" modified="20201103032957203" title="$:/StoryList">
+<div created="20201103032954248" list="[[在 Gnome Terminal 中启用 Ctrl+Tab 快捷键]] [[让 GDM 的登录页面出现在外置显示器上]]" modified="20201103032957203" title="$:/StoryList">
 <pre></pre>
 </div>
 <div bag="default" created="20200502112123171" list="$:/core/ui/SideBarSegments/site-title $:/core/ui/SideBarSegments/site-subtitle $:/core/ui/SideBarSegments/page-controls $:/core/ui/SideBarSegments/search $:/core/ui/SideBarSegments/tabs" modified="20200502112123186" revision="0" title="$:/tags/SideBarSegment" type="text/vnd.tiddlywiki">
@@ -17494,6 +17496,25 @@ sudo chown gdm:gdm ~gdm/.config/monitors.xml
 ```
 
 ''And in the `/etc/gdm3/custom.conf` uncomment WaylandEnable=false''
+&lt;&lt;&lt;
+</pre>
+</div>
+<div created="20201103033404628" modified="20201103042441541" tags="linux gnome terminal shortcut" title="在 Gnome Terminal 中启用 Ctrl+Tab 快捷键">
+<pre>https://askubuntu.com/a/875482
+
+Tested on Ubuntu 18.04
+
+
+&lt;&lt;&lt;
+A way to configure this is by setting `gsettings` from the terminal itself (two commands):
+
+```
+gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ next-tab '&lt;Primary&gt;Tab'
+gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ prev-tab '&lt;Primary&gt;&lt;Shift&gt;Tab'
+
+```
+
+Source: [[the last comment in the bug report|https://bugs.launchpad.net/ubuntu/+source/gnome-terminal/+bug/162000]]
 &lt;&lt;&lt;
 </pre>
 </div>
