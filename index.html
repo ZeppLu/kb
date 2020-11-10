@@ -17480,7 +17480,7 @@ div::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); }
 <div bag="default" created="20200429143346003" modified="20201030052915502" revision="0" title="$:/view" type="text/vnd.tiddlywiki">
 <pre>classic</pre>
 </div>
-<div created="20201110031031214" modified="20201110032422301" tags="linux ubuntu debian archlinux" title="包管理器 cheatsheet">
+<div created="20201110031031214" modified="20201110043020398" tags="linux ubuntu debian archlinux" title="包管理器 cheatsheet">
 <pre>查找本地文件所属的包：
 
 * `pacman -Qo /path/to/file`
@@ -17489,7 +17489,22 @@ div::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); }
 查找某个文件（本地不存在）所属的包：
 
 * `pacman -F /path/to/file`（`sudo pacman -Fy` 更新数据库）
-* `apt-file search /path/to/file`（`sudo apt-file update` 更新数据库）</pre>
+* `apt-file search /path/to/file`（`sudo apt-file update` 更新数据库）
+
+标记某个包为自动/手动安装：
+
+* （在安装时）`sudo pacman -S --asdeps/--asexplicit`
+* （在安装后）`sudo apt-mark auto/manual`
+
+列出手动安装的包：
+
+* `pacman -Qeq`
+* `comm -23 &lt;(apt-mark showmanual | sort -u) &lt;(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)`（https://askubuntu.com/a/492343）
+
+列出自动安装，且不再被依赖的包：
+
+* `pacman -Qtdq`
+* `apt --dry-run autoremove | grep -Po '^Remv \K[^ ]+'`</pre>
 </div>
 <div created="20201103031923075" modified="20201103033243722" tags="display linux gdm" title="让 GDM 的登录页面出现在外置显示器上">
 <pre>https://askubuntu.com/a/1048966
