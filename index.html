@@ -647,6 +647,8 @@ Error message and password prompt
 
 <li>$:/view</li>
 
+<li>包管理器 cheatsheet</li>
+
 <li>让 GDM 的登录页面出现在外置显示器上</li>
 
 <li>在 Gnome Terminal 中启用 Ctrl+Tab 快捷键</li>
@@ -15291,7 +15293,7 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201103032954248" list="[[在 Gnome Terminal 中启用 Ctrl+Tab 快捷键]] [[让 GDM 的登录页面出现在外置显示器上]]" modified="20201103032957203" title="$:/StoryList">
+<div list="[[包管理器 cheatsheet]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div bag="default" created="20200502112123171" list="$:/core/ui/SideBarSegments/site-title $:/core/ui/SideBarSegments/site-subtitle $:/core/ui/SideBarSegments/page-controls $:/core/ui/SideBarSegments/search $:/core/ui/SideBarSegments/tabs" modified="20200502112123186" revision="0" title="$:/tags/SideBarSegment" type="text/vnd.tiddlywiki">
@@ -17477,6 +17479,17 @@ div::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); }
 </div>
 <div bag="default" created="20200429143346003" modified="20201030052915502" revision="0" title="$:/view" type="text/vnd.tiddlywiki">
 <pre>classic</pre>
+</div>
+<div created="20201110031031214" modified="20201110032422301" tags="linux ubuntu debian archlinux" title="包管理器 cheatsheet">
+<pre>查找本地文件所属的包：
+
+* `pacman -Qo /path/to/file`
+* `dpkg -S /path/to/file`
+
+查找某个文件（本地不存在）所属的包：
+
+* `pacman -F /path/to/file`（`sudo pacman -Fy` 更新数据库）
+* `apt-file search /path/to/file`（`sudo apt-file update` 更新数据库）</pre>
 </div>
 <div created="20201103031923075" modified="20201103033243722" tags="display linux gdm" title="让 GDM 的登录页面出现在外置显示器上">
 <pre>https://askubuntu.com/a/1048966
