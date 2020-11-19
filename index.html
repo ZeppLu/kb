@@ -661,6 +661,8 @@ Error message and password prompt
 
 <li>在 Gnome Terminal 中启用 Ctrl+Tab 快捷键</li>
 
+<li>字体设置</li>
+
 <li>Hello World</li>
 
 </ul>
@@ -15292,8 +15294,8 @@ html body.tc-body {
 <div created="20201103032546483" modified="20201113093326796" title="$:/state/tab--959111941">
 <pre>$:/core/ui/ControlPanel/TiddlerFields</pre>
 </div>
-<div created="20201030043824961" modified="20201113093609178" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/KeyboardShortcuts</pre>
+<div created="20201030043824961" modified="20201119121107480" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
 <div created="20201030043826400" modified="20201103032808914" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -15310,7 +15312,7 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201113082108210" list="$:/ControlPanel" modified="20201113093600319" title="$:/StoryList">
+<div created="20201119121105483" list="$:/ControlPanel 字体设置" modified="20201119121105483" title="$:/StoryList">
 <pre></pre>
 </div>
 <div bag="default" created="20200502112123171" list="$:/core/ui/SideBarSegments/site-title $:/core/ui/SideBarSegments/site-subtitle $:/core/ui/SideBarSegments/page-controls $:/core/ui/SideBarSegments/search $:/core/ui/SideBarSegments/tabs" modified="20200502112123186" revision="0" title="$:/tags/SideBarSegment" type="text/vnd.tiddlywiki">
@@ -17588,6 +17590,19 @@ gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/k
 Source: [[the last comment in the bug report|https://bugs.launchpad.net/ubuntu/+source/gnome-terminal/+bug/162000]]
 &lt;&lt;&lt;
 </pre>
+</div>
+<div created="20201119113834425" modified="20201119121122169" tags="windows chrome" title="字体设置">
+<pre>Windows 上更纱黑体可从 https://www.microsoft.com/store/productId/9MW0M424NCZ7 下载，通过 Microsoft Store 更新，避免手动替换字体文件的问题。
+
+------
+
+Chrome 通过 Advanced Font Settings 设置字体的步骤：
+
+# Script = Default 下，标准/无衬线 Source Han Sans，有衬线 Source Han Serif Medium（需用开发者工具修改选项值），等宽 Sarasa Mono SC
+
+# Script = Han/Hangul/Japanese/Traditional Han 下，将所有字体设为使用默认
+
+# 若日语字体没用上思源系（在维基百科中验证），可在 Script = Japanese 下将字体设为其它再设回默认，或者直接设为思源系。bug 成因暂时不明</pre>
 </div>
 <div created="20201030052211565" modified="20201030052222684" tags="" title="Hello World">
 <pre>&lt;&lt;&lt;
