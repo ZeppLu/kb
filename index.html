@@ -15312,7 +15312,7 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201119121105483" list="$:/ControlPanel 字体设置" modified="20201119121105483" title="$:/StoryList">
+<div created="20201202091309808" list="让各种命令使用代理 [[包管理器 cheatsheet]]" modified="20201202093336201" title="$:/StoryList">
 <pre></pre>
 </div>
 <div bag="default" created="20200502112123171" list="$:/core/ui/SideBarSegments/site-title $:/core/ui/SideBarSegments/site-subtitle $:/core/ui/SideBarSegments/page-controls $:/core/ui/SideBarSegments/search $:/core/ui/SideBarSegments/tabs" modified="20200502112123186" revision="0" title="$:/tags/SideBarSegment" type="text/vnd.tiddlywiki">
@@ -17558,13 +17558,25 @@ sudo chown gdm:gdm ~gdm/.config/monitors.xml
 &lt;&lt;&lt;
 </pre>
 </div>
-<div created="20201113072122765" modified="20201113082255760" tags="linux proxy" title="让各种命令使用代理">
-<pre>apt：编辑 `/etc/apt/apt.conf.d/proxy.conf`，输入以下内容：
+<div created="20201113072122765" modified="20201202093839502" tags="linux proxy" title="让各种命令使用代理">
+<pre>wget：设置环境变量 http_proxy / https_proxy。如需默认代理，则编辑 `~/.wgetrc`：
 
-`Acquire {
+```
+use_proxy = on
+http_proxy = http://127.0.0.1:10809
+https_proxy = http://127.0.0.1:10809
+```
+
+------
+
+apt：编辑 `/etc/apt/apt.conf.d/proxy.conf`，输入以下内容：
+
+```
+Acquire {
     HTTP::proxy &quot;http://127.0.0.1:10809&quot;;
     HTTPS::proxy &quot;http://127.0.0.1:10809&quot;;
-}`
+}
+```
 
 ------
 
