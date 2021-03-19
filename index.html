@@ -655,6 +655,8 @@ Error message and password prompt
 
 <li>包管理器 cheatsheet</li>
 
+<li>各种盗版/破解方法</li>
+
 <li>让 GDM 的登录页面出现在外置显示器上</li>
 
 <li>让各种命令使用代理</li>
@@ -15312,7 +15314,7 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201202091309808" list="让各种命令使用代理 [[包管理器 cheatsheet]]" modified="20201202093336201" title="$:/StoryList">
+<div created="20210319135108514" list="让各种命令使用代理 各种盗版/破解方法" modified="20210319135108514" title="$:/StoryList">
 <pre></pre>
 </div>
 <div bag="default" created="20200502112123171" list="$:/core/ui/SideBarSegments/site-title $:/core/ui/SideBarSegments/site-subtitle $:/core/ui/SideBarSegments/page-controls $:/core/ui/SideBarSegments/search $:/core/ui/SideBarSegments/tabs" modified="20200502112123186" revision="0" title="$:/tags/SideBarSegment" type="text/vnd.tiddlywiki">
@@ -15366,11 +15368,11 @@ html body.tc-body {
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1280&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;720&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -17536,6 +17538,21 @@ div::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); }
 
 * `pacman -Qtdq`
 * `apt --dry-run autoremove | grep -Po '^Remv \K[^ ]+'`（https://askubuntu.com/a/652531）</pre>
+</div>
+<div created="20210319134243261" modified="20210319135417333" tags="crack" title="各种盗版/破解方法">
+<pre>!! Windows
+
+准备一台端口开放、自主可控的计算机模拟 KMS 服务器，从 [[https://github.com/kkkgo/vlmcsd/releases]] 下载对应版本的可执行文件，`./vlmcsd-x64-musl-static` 运行。
+
+在需激活的计算机上，用管理员权限运行（产品密钥可从 [[https://official-kmspico.com/windows-10-product-key-list]] 查找）：
+
+```
+slmgr /ipk &lt;产品密钥&gt;
+slmgr /skms &lt;KMS 服务器 IP&gt;
+slmgr /ato
+```
+
+激活完成后，可在 KMS 服务器上杀死 vlmcsd 进程，待 180 天后再次手动激活即可。</pre>
 </div>
 <div created="20201103031923075" modified="20201103033243722" tags="display linux gdm" title="让 GDM 的登录页面出现在外置显示器上">
 <pre>https://askubuntu.com/a/1048966
