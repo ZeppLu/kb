@@ -15314,7 +15314,7 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210319135108514" list="让各种命令使用代理 各种盗版/破解方法" modified="20210319135108514" title="$:/StoryList">
+<div created="20210523055223841" list="各种盗版/破解方法" modified="20210523055223841" title="$:/StoryList">
 <pre></pre>
 </div>
 <div bag="default" created="20200502112123171" list="$:/core/ui/SideBarSegments/site-title $:/core/ui/SideBarSegments/site-subtitle $:/core/ui/SideBarSegments/page-controls $:/core/ui/SideBarSegments/search $:/core/ui/SideBarSegments/tabs" modified="20200502112123186" revision="0" title="$:/tags/SideBarSegment" type="text/vnd.tiddlywiki">
@@ -15368,11 +15368,11 @@ html body.tc-body {
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1280&quot;
+            &quot;text&quot;: &quot;1920&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;720&quot;
+            &quot;text&quot;: &quot;1080&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -17539,7 +17539,7 @@ div::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); }
 * `pacman -Qtdq`
 * `apt --dry-run autoremove | grep -Po '^Remv \K[^ ]+'`（https://askubuntu.com/a/652531）</pre>
 </div>
-<div created="20210319134243261" modified="20210319135417333" tags="crack" title="各种盗版/破解方法">
+<div created="20210319134243261" modified="20210523055938848" tags="crack" title="各种盗版/破解方法">
 <pre>!! Windows
 
 准备一台端口开放、自主可控的计算机模拟 KMS 服务器，从 [[https://github.com/kkkgo/vlmcsd/releases]] 下载对应版本的可执行文件，`./vlmcsd-x64-musl-static` 运行。
@@ -17552,7 +17552,18 @@ slmgr /skms &lt;KMS 服务器 IP&gt;
 slmgr /ato
 ```
 
-激活完成后，可在 KMS 服务器上杀死 vlmcsd 进程，待 180 天后再次手动激活即可。</pre>
+激活完成后，可在 KMS 服务器上杀死 vlmcsd 进程，待 180 天后再次手动激活即可。
+
+!! Visio 2019
+
+找到零售版的镜像，安装之。然后用 https://github.com/kkkgo/office-C2R-to-VOL 将其 license 转为批量版。由于脚本有些问题（对 `reg query` 的返回结果的解析出错），实际用的是 https://gist.github.com/ZeppLu/4939daa4b83cdd8b1ba0fb75f049cc47 。
+
+管理员权限执行：
+
+```
+cscript &quot;C:\Program Files\Microsoft Office\Office16\OSPP.VBS&quot; /sethst:&lt;KMS 服务器 IP&gt;
+cscript /act
+```</pre>
 </div>
 <div created="20201103031923075" modified="20201103033243722" tags="display linux gdm" title="让 GDM 的登录页面出现在外置显示器上">
 <pre>https://askubuntu.com/a/1048966
