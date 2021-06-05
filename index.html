@@ -375,6 +375,8 @@ Error message and password prompt
 
 <li>$:/state/dropdown/keyboardshortcut/heading-1-286565879</li>
 
+<li>$:/state/Link/-1512590584/search</li>
+
 <li>$:/state/searchbar</li>
 
 <li>$:/state/searchtab-1444756290</li>
@@ -662,6 +664,8 @@ Error message and password prompt
 <li>让各种命令使用代理</li>
 
 <li>在 Gnome Terminal 中启用 Ctrl+Tab 快捷键</li>
+
+<li>在命令行使用 cookies</li>
 
 <li>字体设置</li>
 
@@ -15271,6 +15275,9 @@ html body.tc-body {
 <div created="20201030080224807" modified="20201030080233790" title="$:/state/dropdown/keyboardshortcut/heading-1-286565879">
 <pre>close</pre>
 </div>
+<div created="20210605015726804" modified="20210605015728993" title="$:/state/Link/-1512590584/search">
+<pre></pre>
+</div>
 <div created="20201030080533675" modified="20201030080536425" title="$:/state/searchbar">
 <pre>show</pre>
 </div>
@@ -15307,8 +15314,8 @@ html body.tc-body {
 <div created="20201030053339778" modified="20201113093426497" title="$:/state/tab-738187504">
 <pre>$:/themes/jd/Mono/Config/SidebarSegments</pre>
 </div>
-<div created="20201113093508693" modified="20201113093508693" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20201113093508693" modified="20210605015758043" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20201030053121499" modified="20201030080607499" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
@@ -15316,7 +15323,7 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="[[Visio 导出 PDF]]" title="$:/StoryList">
+<div created="20210605014315627" list="[[在命令行使用 cookies]]" modified="20210605015815725" title="$:/StoryList">
 <pre></pre>
 </div>
 <div bag="default" created="20200502112123171" list="$:/core/ui/SideBarSegments/site-title $:/core/ui/SideBarSegments/site-subtitle $:/core/ui/SideBarSegments/page-controls $:/core/ui/SideBarSegments/search $:/core/ui/SideBarSegments/tabs" modified="20200502112123186" revision="0" title="$:/tags/SideBarSegment" type="text/vnd.tiddlywiki">
@@ -17632,6 +17639,11 @@ gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/k
 Source: [[the last comment in the bug report|https://bugs.launchpad.net/ubuntu/+source/gnome-terminal/+bug/162000]]
 &lt;&lt;&lt;
 </pre>
+</div>
+<div created="20210605014833899" modified="20210605015828615" tags="linux" title="在命令行使用 cookies">
+<pre>首先在 Chrome 中获取到需要的 cookies，然后打开 DevTools 转到 Network，在浏览器窗口将 URL 转到网站根目录，回到 Network 找到域名对应的请求，右键复制为 cURL，就可以在命令行中使用了。如需在 wget 中使用，将 `-H` 替换为 `--header`，将 `--data` 替换为 `--post-data`。
+
+[[Reference.|https://stackoverflow.com/a/37780143/8943081]]</pre>
 </div>
 <div created="20201119113834425" modified="20201119121122169" tags="windows chrome" title="字体设置">
 <pre>Windows 上更纱黑体可从 https://www.microsoft.com/store/productId/9MW0M424NCZ7 下载，通过 Microsoft Store 更新，避免手动替换字体文件的问题。
