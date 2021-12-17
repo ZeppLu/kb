@@ -375,6 +375,8 @@ Error message and password prompt
 
 <li>$:/state/dropdown/keyboardshortcut/heading-1-286565879</li>
 
+<li>$:/state/Link/--1437055326/search</li>
+
 <li>$:/state/Link/-1512590584/search</li>
 
 <li>$:/state/searchbar</li>
@@ -15277,6 +15279,9 @@ html body.tc-body {
 <div created="20201030080224807" modified="20201030080233790" title="$:/state/dropdown/keyboardshortcut/heading-1-286565879">
 <pre>close</pre>
 </div>
+<div created="20211217084317961" modified="20211217084320155" title="$:/state/Link/--1437055326/search">
+<pre></pre>
+</div>
 <div created="20210605015726804" modified="20210605015728993" title="$:/state/Link/-1512590584/search">
 <pre></pre>
 </div>
@@ -15310,7 +15315,7 @@ html body.tc-body {
 <div created="20201030043824961" modified="20201119121107480" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
-<div created="20201030043826400" modified="20201103032808914" title="$:/state/tab-2065006209">
+<div created="20201030043826400" modified="20211217084937763" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
 <div created="20201030053339778" modified="20201113093426497" title="$:/state/tab-738187504">
@@ -15325,7 +15330,7 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="文件系统挂载相关" title="$:/StoryList">
+<div created="20211217084406508" list="$:/ControlPanel 文件系统挂载相关" modified="20211217084522469" title="$:/StoryList">
 <pre></pre>
 </div>
 <div bag="default" created="20200502112123171" list="$:/core/ui/SideBarSegments/site-title $:/core/ui/SideBarSegments/site-subtitle $:/core/ui/SideBarSegments/page-controls $:/core/ui/SideBarSegments/search $:/core/ui/SideBarSegments/tabs" modified="20200502112123186" revision="0" title="$:/tags/SideBarSegment" type="text/vnd.tiddlywiki">
@@ -15379,11 +15384,11 @@ html body.tc-body {
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1280&quot;
+            &quot;text&quot;: &quot;1920&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;720&quot;
+            &quot;text&quot;: &quot;1080&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -17623,7 +17628,7 @@ youtube-dl：`youtube-dl --proxy socks5://localhost:10808`
 
 ------</pre>
 </div>
-<div created="20210910163301791" modified="20210910163556190" tags="linux" title="文件系统挂载相关">
+<div created="20210910163301791" modified="20211217084947828" tags="linux windows" title="文件系统挂载相关">
 <pre>各种虚拟机的硬盘如何挂载/映射到块设备文件：
 https://stackoverflow.com/questions/22327728/mounting-vmdk-disk-image
 
@@ -17633,7 +17638,14 @@ raw disk image (may be wrong):
 lsblk  # check for /dev/loopX
 mount /dev/mapper/loopXpY /mnt
 umount /mnt
-kpartx -dv image.img`</pre>
+kpartx -dv image.img`
+
+-------------
+
+Windows 如何安全移除移动硬盘/U盘：
+
+# 尝试在任务管理器中按命令行排序，然后停止所有 `C:\Windows\System32\dllhost.exe` 的进程
+# 如果还不行，用其它工具找出占用硬盘的进程，然后再逐一停止之（TODO，[[ref|https://superuser.com/questions/87364/can-windows-tell-me-what-is-using-my-usb-drive]]）</pre>
 </div>
 <div created="20201103033404628" modified="20201103042441541" tags="linux gnome terminal shortcut" title="在 Gnome Terminal 中启用 Ctrl+Tab 快捷键">
 <pre>https://askubuntu.com/a/875482
